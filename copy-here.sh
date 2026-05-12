@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Copy different items (files and folders) from a target to the working directory 
+# Primarily used for copying config files to a different folder for git tracking.
 # Usage: ./copy-folders-here.sh <target_dir>
 
 # Public folders variable to keep track of folders that want to be copied
@@ -53,6 +54,17 @@ function copyItems() {
   echo "Done."
 }
 
+# Makes symbolic links to working directory from target ($1) to preserve functionality
+function linkItems() {
+  echo "Linking items that were just copied from here back to $targetDir"
+
+  for item in "${items[@]}"; do
+    local destItem="$destDir/$item"
+    local targetItem="$targetDir/$item"
+    ln -s $destItem $targetItem
+  done
+}
+
 # Cleans up all files other than the script DEBUG ONLY
 function cleanItems() {
   echo "Cleaning up items just coppied"
@@ -71,4 +83,5 @@ function cleanItems() {
 # main run
 readItems
 copyItems
+linkItems
 # cleanItems
