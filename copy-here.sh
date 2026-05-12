@@ -2,12 +2,12 @@
 
 # Copy different items (files and folders) from a target to the working directory 
 # Primarily used for copying config files to a different folder for git tracking.
-# Usage: ./copy-folders-here.sh <target_dir>
+# Usage: ./copy-folders-here.sh <target_dir> <dest_dir>
 
 # Public folders variable to keep track of folders that want to be copied
 declare -a items=()
 declare targetDir=$1
-declare destDir=$(pwd)
+declare destDir=$2
 
 # DEBUG ONLY
 # echo "folders:   $items"
