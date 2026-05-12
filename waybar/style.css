@@ -1,0 +1,114 @@
+@import url("wal-colors.css");
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: 'Maple Mono NF CN';
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+}
+
+#waybar * {
+    padding: 0 5px;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: @color10;
+}
+
+#workspaces button {
+    margin: 3px 0;
+    margin-right: 5px;
+    background-color: transparent;
+    color: @foreground;
+    transition-property: opacity;
+    transition-duration: .2s;
+}
+
+#workspaces button:hover {
+    background: @color0;
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: @color8;
+    color: @background;
+}
+
+#workspaces button.urgent {
+    background-color: @color2;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+#network {
+    padding-right: 10px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #26A65B;
+}
+
+
+/* Using steps() instead of liar as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: @background;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    color: @color14;
+    box-shadow: 0px 0px 150px 0px @color14;
+}
+
+#power-profiles-daemon.balanced {
+    color: @color5;
+    box-shadow: 0px 0px 150px 0px @color5;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @color10;
+    box-shadow: 0px 0px 150px 0px @color10;
+}
+
+#pulseaudio {
+    background-color: @color8;
+    color: @background;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+/* #tray {
+    background-color: #2980b9;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+} */

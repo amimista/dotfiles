@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy different items (files and folders) from a target to the working directory 
-# Usage: ./copy-here.sh <target_dir>
+# Usage: ./copy-folders-here.sh <target_dir>
 
 # Public folders variable to keep track of folders that want to be copied
 declare -a items=()

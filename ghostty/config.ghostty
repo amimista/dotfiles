@@ -1,0 +1,3 @@
+config-file = ~/.cache/wal/ghostty.conf
+font-family= Maple Mono NF CN
+confirm-close-surface = false
