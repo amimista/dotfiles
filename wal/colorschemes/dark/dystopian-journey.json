@@ -1,0 +1,28 @@
+{
+    "checksum": "78e5931c93eff12f27f2892c7a47b0ac",
+    "wallpaper": "/home/marcusw/Pictures/Wallpapers/dystopian-journey.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#272410",
+        "foreground": "#c9c8c3",
+        "cursor": "#c9c8c3"
+    },
+    "colors": {
+        "color0": "#272410",
+        "color1": "#55cff8",
+        "color2": "#b4c7a1",
+        "color3": "#ffaf69",
+        "color4": "#d7c051",
+        "color5": "#50cef8",
+        "color6": "#69cdf0",
+        "color7": "#c9c8c3",
+        "color8": "#c7c1a1",
+        "color9": "#55cff8",
+        "color10": "#b4c7a1",
+        "color11": "#ffaf69",
+        "color12": "#d7c051",
+        "color13": "#50cef8",
+        "color14": "#69cdf0",
+        "color15": "#c9c8c3"
+    }
+}

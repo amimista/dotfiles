@@ -33,7 +33,8 @@ function readItems() {
   done
 
   # List input captured by above
-  echo "\nFolders that are going to be copied"
+  echo ""
+  echo "Folders that are going to be copied"
   echo "-----------------------------------"
   for item in "${items[@]}"; do
     echo "$item"
